@@ -7,7 +7,6 @@ D:\Github\RabbitMQ\RabbitMQ.Producer\RabbitMQ.Consumer\bin\Debug\net5.0\ref\Rabb
 D:\Github\RabbitMQ\RabbitMQ.Producer\RabbitMQ.Consumer\bin\Debug\net5.0\RabbitMQ.Consumer.pdb
 D:\Github\RabbitMQ\RabbitMQ.Producer\RabbitMQ.Consumer\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Github\RabbitMQ\RabbitMQ.Producer\RabbitMQ.Consumer\bin\Debug\net5.0\RabbitMQ.Client.dll
-D:\Github\RabbitMQ\RabbitMQ.Producer\RabbitMQ.Consumer\obj\Debug\net5.0\RabbitMQ.Consumer.csproj.AssemblyReference.cache
 D:\Github\RabbitMQ\RabbitMQ.Producer\RabbitMQ.Consumer\obj\Debug\net5.0\RabbitMQ.Consumer.GeneratedMSBuildEditorConfig.editorconfig
 D:\Github\RabbitMQ\RabbitMQ.Producer\RabbitMQ.Consumer\obj\Debug\net5.0\RabbitMQ.Consumer.AssemblyInfoInputs.cache
 D:\Github\RabbitMQ\RabbitMQ.Producer\RabbitMQ.Consumer\obj\Debug\net5.0\RabbitMQ.Consumer.AssemblyInfo.cs

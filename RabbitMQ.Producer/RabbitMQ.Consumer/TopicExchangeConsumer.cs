@@ -8,19 +8,16 @@ using System.Threading.Tasks;
 
 namespace RabbitMQ.Consumer
 {
-    public static class DirectExchangeConsumer
+    public static class TopicExchangeConsumer
     {
         public static void Consume(IModel channel)
         {
-            channel.ExchangeDeclare("demo-direct-exchange", ExchangeType.Direct);
-            channel.QueueDeclare("demo-direct-queue", durable: true,
+            channel.ExchangeDeclare("demo-topic-exchange", ExchangeType.Topic);
+            channel.QueueDeclare("demo-topic-queue", durable: true,
                exclusive: false,
                autoDelete: false,
                arguments: null);
-            // channel.QueueBind("demo-direct-exchange", "demo-direct-exchange", "aacount.init");
-            channel.QueueBind(queue: "demo-direct-exchange",
-                   exchange: "demo-direct-exchange",
-                   routingKey: "account.init");
+            channel.QueueBind("demo-topic-exchange", "demo-topic-exchange", "aacount.*");
             channel.BasicQos(0, 10, false);
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += (sender, e) =>
@@ -29,7 +26,7 @@ namespace RabbitMQ.Consumer
                 var message = Encoding.UTF8.GetString(body);
                 Console.WriteLine(message);
             };
-            channel.BasicConsume("demo-direct-exchange", true, consumer);
+            channel.BasicConsume("demo-topic-exchange", true, consumer);
             Console.WriteLine("Consumer started");
             Console.ReadLine();
         }
